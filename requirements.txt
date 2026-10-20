@@ -1,0 +1,10 @@
+# Install PyTorch separately for the host CUDA version (>=2.2 is required).
+numpy>=1.26,<3
+pandas>=2.0,<4
+pyarrow>=14,<25
+PyYAML>=6,<7
+scikit-learn>=1.3,<2
+tqdm>=4.66,<5
+streamlit>=1.36,<2
+pytest>=8,<9
+

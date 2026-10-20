@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coldstart-dee-recommender"
+version = "0.1.0"
+description = "Cold-start MovieLens recommendations with paper-faithful DEE fairness regularization"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26,<3",
+  "pandas>=2.0,<4",
+  "pyarrow>=14,<25",
+  "PyYAML>=6,<7",
+  "scikit-learn>=1.3,<2",
+  "torch>=2.2",
+  "tqdm>=4.66,<5",
+  "streamlit>=1.36,<2",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<9"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+markers = [
+  "integration: requires processed data or trained artifacts",
+  "gpu: requires one CUDA GPU",
+]
+

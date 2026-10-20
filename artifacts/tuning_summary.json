@@ -1,0 +1,642 @@
+{
+  "bounded_search": true,
+  "failed_trials": [],
+  "selected_baseline": {
+    "checkpoint": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/checkpoints/baseline_best.pt",
+    "trial": "base_64",
+    "validation": {
+      "count": 24992,
+      "dee": 0.0250166654586792,
+      "dee_huber": 0.0001150842581409961,
+      "hitrate@10": 1.0,
+      "mae": 0.7772639393806458,
+      "ndcg@10": 0.830599262017716,
+      "recall@10": 0.3532996629593078,
+      "rmse": 0.9760196805000305,
+      "users": 604
+    }
+  },
+  "selected_fair": {
+    "checkpoint": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/checkpoints/fair_best.pt",
+    "met_accuracy_fairness_constraints": true,
+    "selection_reason": "lowest validation DEE among accuracy-retaining trials",
+    "trial": "dee_100_h025",
+    "validation": {
+      "count": 24992,
+      "dee": 0.006987869739532471,
+      "dee_huber": 8.588966920797247e-06,
+      "hitrate@10": 0.9983443708609272,
+      "mae": 0.7999087572097778,
+      "ndcg@10": 0.837174104895508,
+      "recall@10": 0.3526156718278945,
+      "rmse": 0.9917121529579163,
+      "users": 604
+    }
+  },
+  "timestamp": "2026-07-29T12:32:20.933676+00:00",
+  "trial_count": 7,
+  "trials": [
+    {
+      "config": {
+        "data": {
+          "processed_path": "data/processed/movielens_1m.npz"
+        },
+        "evaluation": {
+          "batch_size": 64,
+          "dee_bandwidth": 0.5,
+          "max_users": null,
+          "preference_threshold": 3.0,
+          "support_sizes": [
+            1,
+            3,
+            5,
+            10
+          ],
+          "top_k": 10
+        },
+        "model": {
+          "context_dim": 96,
+          "dropout": 0.1,
+          "gender_dropout": 0.1,
+          "gender_embedding_dim": 8,
+          "hidden_dim": 128,
+          "item_embedding_dim": 64
+        },
+        "seed": 20260729,
+        "train": {
+          "batch_size": 64,
+          "dee_bandwidth": 0.5,
+          "dee_coefficient": 0.0,
+          "dee_huber_delta": 0.01,
+          "device": "cuda",
+          "epochs": 8,
+          "fairness_candidate_size": 96,
+          "grad_clip": 5.0,
+          "learning_rate": 0.001,
+          "max_train_users": null,
+          "max_val_users": null,
+          "num_workers": 0,
+          "preference_threshold": 3.0,
+          "query_size": 48,
+          "support_sizes": [
+            0,
+            1,
+            3,
+            5,
+            10
+          ],
+          "weight_decay": 1e-05
+        }
+      },
+      "kind": "baseline",
+      "name": "base_64",
+      "status": "completed",
+      "summary": {
+        "best_checkpoint": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/tuning/baseline/base_64/best.pt",
+        "best_epoch": 7,
+        "best_validation": {
+          "count": 24992,
+          "dee": 0.0250166654586792,
+          "dee_huber": 0.0001150842581409961,
+          "hitrate@10": 1.0,
+          "mae": 0.7772639393806458,
+          "ndcg@10": 0.830599262017716,
+          "recall@10": 0.3532996629593078,
+          "rmse": 0.9760196805000305,
+          "users": 604
+        },
+        "best_validation_objective": 0.9760196805000305,
+        "cuda_device_name": "NVIDIA B200",
+        "dee_bandwidth": 0.5,
+        "dee_coefficient": 0.0,
+        "device": "cuda:0",
+        "elapsed_seconds": 3.4864147801417857,
+        "epochs": 8,
+        "initialization": "random",
+        "parameters": 363908,
+        "seed": 20260729,
+        "status": "completed",
+        "train_users": 4832,
+        "val_users": 604,
+        "validation_dee_bandwidth": 0.5,
+        "visible_gpu_count": 1
+      }
+    },
+    {
+      "config": {
+        "data": {
+          "processed_path": "data/processed/movielens_1m.npz"
+        },
+        "evaluation": {
+          "batch_size": 64,
+          "dee_bandwidth": 0.5,
+          "max_users": null,
+          "preference_threshold": 3.0,
+          "support_sizes": [
+            1,
+            3,
+            5,
+            10
+          ],
+          "top_k": 10
+        },
+        "model": {
+          "context_dim": 64,
+          "dropout": 0.1,
+          "gender_dropout": 0.1,
+          "gender_embedding_dim": 8,
+          "hidden_dim": 96,
+          "item_embedding_dim": 48
+        },
+        "seed": 20260730,
+        "train": {
+          "batch_size": 64,
+          "dee_bandwidth": 0.5,
+          "dee_coefficient": 0.0,
+          "dee_huber_delta": 0.01,
+          "device": "cuda",
+          "epochs": 8,
+          "fairness_candidate_size": 96,
+          "grad_clip": 5.0,
+          "learning_rate": 0.002,
+          "max_train_users": null,
+          "max_val_users": null,
+          "num_workers": 0,
+          "preference_threshold": 3.0,
+          "query_size": 48,
+          "support_sizes": [
+            0,
+            1,
+            3,
+            5,
+            10
+          ],
+          "weight_decay": 0.0001
+        }
+      },
+      "kind": "baseline",
+      "name": "compact_48",
+      "status": "completed",
+      "summary": {
+        "best_checkpoint": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/tuning/baseline/compact_48/best.pt",
+        "best_epoch": 6,
+        "best_validation": {
+          "count": 24992,
+          "dee": 0.027419567108154297,
+          "dee_huber": 0.00012635000166483223,
+          "hitrate@10": 1.0,
+          "mae": 0.7818042635917664,
+          "ndcg@10": 0.8325384601392947,
+          "recall@10": 0.35495776296122694,
+          "rmse": 0.9793863892555237,
+          "users": 604
+        },
+        "best_validation_objective": 0.9793863892555237,
+        "cuda_device_name": "NVIDIA B200",
+        "dee_bandwidth": 0.5,
+        "dee_coefficient": 0.0,
+        "device": "cuda:0",
+        "elapsed_seconds": 3.278876226162538,
+        "epochs": 8,
+        "initialization": "random",
+        "parameters": 252372,
+        "seed": 20260730,
+        "status": "completed",
+        "train_users": 4832,
+        "val_users": 604,
+        "validation_dee_bandwidth": 0.5,
+        "visible_gpu_count": 1
+      }
+    },
+    {
+      "config": {
+        "data": {
+          "processed_path": "data/processed/movielens_1m.npz"
+        },
+        "evaluation": {
+          "batch_size": 64,
+          "dee_bandwidth": 0.5,
+          "max_users": null,
+          "preference_threshold": 3.0,
+          "support_sizes": [
+            1,
+            3,
+            5,
+            10
+          ],
+          "top_k": 10
+        },
+        "model": {
+          "context_dim": 128,
+          "dropout": 0.1,
+          "gender_dropout": 0.1,
+          "gender_embedding_dim": 8,
+          "hidden_dim": 192,
+          "item_embedding_dim": 96
+        },
+        "seed": 20260731,
+        "train": {
+          "batch_size": 64,
+          "dee_bandwidth": 0.5,
+          "dee_coefficient": 0.0,
+          "dee_huber_delta": 0.01,
+          "device": "cuda",
+          "epochs": 8,
+          "fairness_candidate_size": 96,
+          "grad_clip": 5.0,
+          "learning_rate": 0.0007,
+          "max_train_users": null,
+          "max_val_users": null,
+          "num_workers": 0,
+          "preference_threshold": 3.0,
+          "query_size": 48,
+          "support_sizes": [
+            0,
+            1,
+            3,
+            5,
+            10
+          ],
+          "weight_decay": 1e-05
+        }
+      },
+      "kind": "baseline",
+      "name": "wide_96",
+      "status": "completed",
+      "summary": {
+        "best_checkpoint": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/tuning/baseline/wide_96/best.pt",
+        "best_epoch": 5,
+        "best_validation": {
+          "count": 24992,
+          "dee": 0.016163945198059082,
+          "dee_huber": 4.1475839680060744e-05,
+          "hitrate@10": 1.0,
+          "mae": 0.7718295454978943,
+          "ndcg@10": 0.8315731208886245,
+          "recall@10": 0.3538584059665715,
+          "rmse": 0.9767071008682251,
+          "users": 604
+        },
+        "best_validation_objective": 0.9767071008682251,
+        "cuda_device_name": "NVIDIA B200",
+        "dee_bandwidth": 0.5,
+        "dee_coefficient": 0.0,
+        "device": "cuda:0",
+        "elapsed_seconds": 3.539407043950632,
+        "epochs": 8,
+        "initialization": "random",
+        "parameters": 617572,
+        "seed": 20260731,
+        "status": "completed",
+        "train_users": 4832,
+        "val_users": 604,
+        "validation_dee_bandwidth": 0.5,
+        "visible_gpu_count": 1
+      }
+    },
+    {
+      "config": {
+        "data": {
+          "processed_path": "data/processed/movielens_1m.npz"
+        },
+        "evaluation": {
+          "batch_size": 64,
+          "dee_bandwidth": 0.5,
+          "max_users": null,
+          "preference_threshold": 3.0,
+          "support_sizes": [
+            1,
+            3,
+            5,
+            10
+          ],
+          "top_k": 10
+        },
+        "model": {
+          "context_dim": 96,
+          "dropout": 0.1,
+          "gender_dropout": 0.1,
+          "gender_embedding_dim": 8,
+          "hidden_dim": 128,
+          "item_embedding_dim": 64
+        },
+        "seed": 20261729,
+        "train": {
+          "batch_size": 64,
+          "dee_bandwidth": 0.5,
+          "dee_coefficient": 5.0,
+          "dee_huber_delta": 0.01,
+          "device": "cuda",
+          "epochs": 8,
+          "fairness_candidate_size": 96,
+          "grad_clip": 5.0,
+          "learning_rate": 0.001,
+          "max_train_users": null,
+          "max_val_users": null,
+          "num_workers": 0,
+          "preference_threshold": 3.0,
+          "query_size": 48,
+          "support_sizes": [
+            0,
+            1,
+            3,
+            5,
+            10
+          ],
+          "weight_decay": 1e-05
+        }
+      },
+      "kind": "fair",
+      "name": "dee_005_h050",
+      "status": "completed",
+      "summary": {
+        "best_checkpoint": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/tuning/fair/dee_005_h050/best.pt",
+        "best_epoch": 6,
+        "best_validation": {
+          "count": 24992,
+          "dee": 0.020833969116210938,
+          "dee_huber": 7.456490129698068e-05,
+          "hitrate@10": 1.0,
+          "mae": 0.7819012999534607,
+          "ndcg@10": 0.8329401201707304,
+          "recall@10": 0.35211486041132817,
+          "rmse": 0.9756897687911987,
+          "users": 604
+        },
+        "best_validation_objective": 0.9760625932976836,
+        "cuda_device_name": "NVIDIA B200",
+        "dee_bandwidth": 0.5,
+        "dee_coefficient": 5.0,
+        "device": "cuda:0",
+        "elapsed_seconds": 4.582495288923383,
+        "epochs": 8,
+        "initialization": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/tuning/baseline/base_64/best.pt",
+        "parameters": 363908,
+        "seed": 20261729,
+        "status": "completed",
+        "train_users": 4832,
+        "val_users": 604,
+        "validation_dee_bandwidth": 0.5,
+        "visible_gpu_count": 1
+      }
+    },
+    {
+      "config": {
+        "data": {
+          "processed_path": "data/processed/movielens_1m.npz"
+        },
+        "evaluation": {
+          "batch_size": 64,
+          "dee_bandwidth": 0.5,
+          "max_users": null,
+          "preference_threshold": 3.0,
+          "support_sizes": [
+            1,
+            3,
+            5,
+            10
+          ],
+          "top_k": 10
+        },
+        "model": {
+          "context_dim": 96,
+          "dropout": 0.1,
+          "gender_dropout": 0.1,
+          "gender_embedding_dim": 8,
+          "hidden_dim": 128,
+          "item_embedding_dim": 64
+        },
+        "seed": 20261730,
+        "train": {
+          "batch_size": 64,
+          "dee_bandwidth": 0.5,
+          "dee_coefficient": 25.0,
+          "dee_huber_delta": 0.01,
+          "device": "cuda",
+          "epochs": 8,
+          "fairness_candidate_size": 96,
+          "grad_clip": 5.0,
+          "learning_rate": 0.001,
+          "max_train_users": null,
+          "max_val_users": null,
+          "num_workers": 0,
+          "preference_threshold": 3.0,
+          "query_size": 48,
+          "support_sizes": [
+            0,
+            1,
+            3,
+            5,
+            10
+          ],
+          "weight_decay": 1e-05
+        }
+      },
+      "kind": "fair",
+      "name": "dee_025_h050",
+      "status": "completed",
+      "summary": {
+        "best_checkpoint": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/tuning/fair/dee_025_h050/best.pt",
+        "best_epoch": 5,
+        "best_validation": {
+          "count": 24992,
+          "dee": 0.024522125720977783,
+          "dee_huber": 0.00010559777001617476,
+          "hitrate@10": 1.0,
+          "mae": 0.7801307439804077,
+          "ndcg@10": 0.83071824227813,
+          "recall@10": 0.35100148618079674,
+          "rmse": 0.9780287146568298,
+          "users": 604
+        },
+        "best_validation_objective": 0.9806686589072342,
+        "cuda_device_name": "NVIDIA B200",
+        "dee_bandwidth": 0.5,
+        "dee_coefficient": 25.0,
+        "device": "cuda:0",
+        "elapsed_seconds": 4.395602606004104,
+        "epochs": 8,
+        "initialization": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/tuning/baseline/base_64/best.pt",
+        "parameters": 363908,
+        "seed": 20261730,
+        "status": "completed",
+        "train_users": 4832,
+        "val_users": 604,
+        "validation_dee_bandwidth": 0.5,
+        "visible_gpu_count": 1
+      }
+    },
+    {
+      "config": {
+        "data": {
+          "processed_path": "data/processed/movielens_1m.npz"
+        },
+        "evaluation": {
+          "batch_size": 64,
+          "dee_bandwidth": 0.5,
+          "max_users": null,
+          "preference_threshold": 3.0,
+          "support_sizes": [
+            1,
+            3,
+            5,
+            10
+          ],
+          "top_k": 10
+        },
+        "model": {
+          "context_dim": 96,
+          "dropout": 0.1,
+          "gender_dropout": 0.1,
+          "gender_embedding_dim": 8,
+          "hidden_dim": 128,
+          "item_embedding_dim": 64
+        },
+        "seed": 20261731,
+        "train": {
+          "batch_size": 64,
+          "dee_bandwidth": 0.25,
+          "dee_coefficient": 100.0,
+          "dee_huber_delta": 0.01,
+          "device": "cuda",
+          "epochs": 8,
+          "fairness_candidate_size": 96,
+          "grad_clip": 5.0,
+          "learning_rate": 0.001,
+          "max_train_users": null,
+          "max_val_users": null,
+          "num_workers": 0,
+          "preference_threshold": 3.0,
+          "query_size": 48,
+          "support_sizes": [
+            0,
+            1,
+            3,
+            5,
+            10
+          ],
+          "weight_decay": 1e-05
+        }
+      },
+      "kind": "fair",
+      "name": "dee_100_h025",
+      "status": "completed",
+      "summary": {
+        "best_checkpoint": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/tuning/fair/dee_100_h025/best.pt",
+        "best_epoch": 8,
+        "best_validation": {
+          "count": 24992,
+          "dee": 0.006987869739532471,
+          "dee_huber": 8.588966920797247e-06,
+          "hitrate@10": 0.9983443708609272,
+          "mae": 0.7999087572097778,
+          "ndcg@10": 0.837174104895508,
+          "recall@10": 0.3526156718278945,
+          "rmse": 0.9917121529579163,
+          "users": 604
+        },
+        "best_validation_objective": 0.992571049649996,
+        "cuda_device_name": "NVIDIA B200",
+        "dee_bandwidth": 0.25,
+        "dee_coefficient": 100.0,
+        "device": "cuda:0",
+        "elapsed_seconds": 4.736643283860758,
+        "epochs": 8,
+        "initialization": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/tuning/baseline/base_64/best.pt",
+        "parameters": 363908,
+        "seed": 20261731,
+        "status": "completed",
+        "train_users": 4832,
+        "val_users": 604,
+        "validation_dee_bandwidth": 0.5,
+        "visible_gpu_count": 1
+      }
+    },
+    {
+      "config": {
+        "data": {
+          "processed_path": "data/processed/movielens_1m.npz"
+        },
+        "evaluation": {
+          "batch_size": 64,
+          "dee_bandwidth": 0.5,
+          "max_users": null,
+          "preference_threshold": 3.0,
+          "support_sizes": [
+            1,
+            3,
+            5,
+            10
+          ],
+          "top_k": 10
+        },
+        "model": {
+          "context_dim": 96,
+          "dropout": 0.1,
+          "gender_dropout": 0.1,
+          "gender_embedding_dim": 8,
+          "hidden_dim": 128,
+          "item_embedding_dim": 64
+        },
+        "seed": 20261732,
+        "train": {
+          "batch_size": 64,
+          "dee_bandwidth": 0.75,
+          "dee_coefficient": 100.0,
+          "dee_huber_delta": 0.01,
+          "device": "cuda",
+          "epochs": 8,
+          "fairness_candidate_size": 96,
+          "grad_clip": 5.0,
+          "learning_rate": 0.001,
+          "max_train_users": null,
+          "max_val_users": null,
+          "num_workers": 0,
+          "preference_threshold": 3.0,
+          "query_size": 48,
+          "support_sizes": [
+            0,
+            1,
+            3,
+            5,
+            10
+          ],
+          "weight_decay": 1e-05
+        }
+      },
+      "kind": "fair",
+      "name": "dee_100_h075",
+      "status": "completed",
+      "summary": {
+        "best_checkpoint": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/tuning/fair/dee_100_h075/best.pt",
+        "best_epoch": 7,
+        "best_validation": {
+          "count": 24992,
+          "dee": 0.011764824390411377,
+          "dee_huber": 2.2115402316558175e-05,
+          "hitrate@10": 1.0,
+          "mae": 0.7992691397666931,
+          "ndcg@10": 0.8352806094192632,
+          "recall@10": 0.35203152997006865,
+          "rmse": 0.9895596504211426,
+          "users": 604
+        },
+        "best_validation_objective": 0.9917711906527984,
+        "cuda_device_name": "NVIDIA B200",
+        "dee_bandwidth": 0.75,
+        "dee_coefficient": 100.0,
+        "device": "cuda:0",
+        "elapsed_seconds": 4.922343089943752,
+        "epochs": 8,
+        "initialization": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/tuning/baseline/base_64/best.pt",
+        "parameters": 363908,
+        "seed": 20261732,
+        "status": "completed",
+        "train_users": 4832,
+        "val_users": 604,
+        "validation_dee_bandwidth": 0.5,
+        "visible_gpu_count": 1
+      }
+    }
+  ]
+}

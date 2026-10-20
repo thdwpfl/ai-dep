@@ -1,0 +1,37 @@
+stress_trials:
+  - name: margin_020_beta_030
+    stress_margin: 0.2
+    stress_coefficient: 0.3
+  - name: margin_040_beta_030
+    stress_margin: 0.4
+    stress_coefficient: 0.3
+  - name: margin_040_beta_100
+    stress_margin: 0.4
+    stress_coefficient: 1.0
+  - name: margin_060_beta_030
+    stress_margin: 0.6
+    stress_coefficient: 0.3
+  - name: margin_060_beta_100
+    stress_margin: 0.6
+    stress_coefficient: 1.0
+fair_trials:
+  - name: dee_025_h050
+    dee_coefficient: 25.0
+    dee_bandwidth: 0.5
+  - name: dee_100_h050
+    dee_coefficient: 100.0
+    dee_bandwidth: 0.5
+  - name: dee_100_h025
+    dee_coefficient: 100.0
+    dee_bandwidth: 0.25
+  - name: dee_250_h025
+    dee_coefficient: 250.0
+    dee_bandwidth: 0.25
+selection:
+  stress_min_interaction_gap: 0.3
+  stress_max_rmse_increase_fraction: 0.10
+  stress_min_ndcg_retention: 0.90
+  fair_min_dee_improvement_fraction: 0.50
+  fair_min_interaction_improvement_fraction: 0.50
+  fair_max_rmse_increase_fraction: 0.05
+  fair_min_ndcg_retention: 0.95

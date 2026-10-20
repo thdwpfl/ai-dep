@@ -1,0 +1,111 @@
+[
+  {
+    "genres": [
+      "Action",
+      "Drama"
+    ],
+    "item_index": 1950,
+    "movie_id": 2019,
+    "predicted_score": 4.5985,
+    "title": "Seven Samurai (The Magnificent Seven) (Shichinin no samurai)",
+    "year": 1954
+  },
+  {
+    "genres": [
+      "Drama"
+    ],
+    "item_index": 315,
+    "movie_id": 318,
+    "predicted_score": 4.58,
+    "title": "Shawshank Redemption, The",
+    "year": 1994
+  },
+  {
+    "genres": [
+      "Film-Noir"
+    ],
+    "item_index": 910,
+    "movie_id": 922,
+    "predicted_score": 4.5725,
+    "title": "Sunset Blvd. (a.k.a. Sunset Boulevard)",
+    "year": 1950
+  },
+  {
+    "genres": [
+      "Drama",
+      "War"
+    ],
+    "item_index": 523,
+    "movie_id": 527,
+    "predicted_score": 4.5623,
+    "title": "Schindler's List",
+    "year": 1993
+  },
+  {
+    "genres": [
+      "Drama",
+      "War"
+    ],
+    "item_index": 1162,
+    "movie_id": 1178,
+    "predicted_score": 4.562,
+    "title": "Paths of Glory",
+    "year": 1957
+  },
+  {
+    "genres": [
+      "Mystery",
+      "Thriller"
+    ],
+    "item_index": 892,
+    "movie_id": 904,
+    "predicted_score": 4.5527,
+    "title": "Rear Window",
+    "year": 1954
+  },
+  {
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "item_index": 847,
+    "movie_id": 858,
+    "predicted_score": 4.5503,
+    "title": "Godfather, The",
+    "year": 1972
+  },
+  {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "item_index": 2836,
+    "movie_id": 2905,
+    "predicted_score": 4.5464,
+    "title": "Sanjuro",
+    "year": 1962
+  },
+  {
+    "genres": [
+      "Sci-Fi",
+      "War"
+    ],
+    "item_index": 740,
+    "movie_id": 750,
+    "predicted_score": 4.5428,
+    "title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+    "year": 1963
+  },
+  {
+    "genres": [
+      "Crime",
+      "Thriller"
+    ],
+    "item_index": 49,
+    "movie_id": 50,
+    "predicted_score": 4.5362,
+    "title": "Usual Suspects, The",
+    "year": 1995
+  }
+]

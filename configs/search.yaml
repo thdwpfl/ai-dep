@@ -1,0 +1,41 @@
+seed: 20260729
+baseline_trials:
+  - name: base_64
+    overrides:
+      model.item_embedding_dim: 64
+      model.hidden_dim: 128
+      model.context_dim: 96
+      train.learning_rate: 0.001
+      train.weight_decay: 0.00001
+  - name: compact_48
+    overrides:
+      model.item_embedding_dim: 48
+      model.hidden_dim: 96
+      model.context_dim: 64
+      train.learning_rate: 0.002
+      train.weight_decay: 0.0001
+  - name: wide_96
+    overrides:
+      model.item_embedding_dim: 96
+      model.hidden_dim: 192
+      model.context_dim: 128
+      train.learning_rate: 0.0007
+      train.weight_decay: 0.00001
+fair_trials:
+  - name: dee_005_h050
+    dee_coefficient: 5.0
+    dee_bandwidth: 0.50
+  - name: dee_025_h050
+    dee_coefficient: 25.0
+    dee_bandwidth: 0.50
+  - name: dee_100_h025
+    dee_coefficient: 100.0
+    dee_bandwidth: 0.25
+  - name: dee_100_h075
+    dee_coefficient: 100.0
+    dee_bandwidth: 0.75
+selection:
+  min_ndcg_retention: 0.95
+  max_rmse_increase_fraction: 0.05
+  minimum_dee_improvement_fraction: 0.10
+

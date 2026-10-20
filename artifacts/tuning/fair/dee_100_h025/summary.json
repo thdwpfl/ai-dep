@@ -1,0 +1,30 @@
+{
+  "best_checkpoint": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/tuning/fair/dee_100_h025/best.pt",
+  "best_epoch": 8,
+  "best_validation": {
+    "count": 24992,
+    "dee": 0.006987869739532471,
+    "dee_huber": 8.588966920797247e-06,
+    "hitrate@10": 0.9983443708609272,
+    "mae": 0.7999087572097778,
+    "ndcg@10": 0.837174104895508,
+    "recall@10": 0.3526156718278945,
+    "rmse": 0.9917121529579163,
+    "users": 604
+  },
+  "best_validation_objective": 0.992571049649996,
+  "cuda_device_name": "NVIDIA B200",
+  "dee_bandwidth": 0.25,
+  "dee_coefficient": 100.0,
+  "device": "cuda:0",
+  "elapsed_seconds": 4.736643283860758,
+  "epochs": 8,
+  "initialization": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/tuning/baseline/base_64/best.pt",
+  "parameters": 363908,
+  "seed": 20261731,
+  "status": "completed",
+  "train_users": 4832,
+  "val_users": 604,
+  "validation_dee_bandwidth": 0.5,
+  "visible_gpu_count": 1
+}

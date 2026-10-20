@@ -1,0 +1,337 @@
+{
+  "checkpoint": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/checkpoints/explicit_natural_best.pt",
+  "checkpoint_epoch": 3,
+  "num_users": 604,
+  "protocol": {
+    "positive_rating_threshold": 4.0,
+    "query": "all later rated movies",
+    "ranking_candidates": "the held-out rated query set",
+    "recommendation_candidates": "full catalog excluding support movies",
+    "split": "test",
+    "support": "earliest timestamp-ordered ratings",
+    "top_k": 10,
+    "user_disjoint": true
+  },
+  "support_sizes": {
+    "1": {
+      "count": 101460,
+      "dee": 0.032977938652038574,
+      "dee_huber": 0.00017164941527880728,
+      "dee_ranking": 0.014919562032446265,
+      "genre_exposure_by_gender": {
+        "female": {
+          "Action": 0.19941520467836257,
+          "Adventure": 0.0,
+          "Animation": 0.17953216374269007,
+          "Children's": 0.0,
+          "Comedy": 0.15964912280701754,
+          "Crime": 0.19941520467836257,
+          "Documentary": 0.0,
+          "Drama": 0.4017543859649123,
+          "Fantasy": 0.0,
+          "Film-Noir": 0.12046783625730995,
+          "Horror": 0.0,
+          "Musical": 0.03742690058479532,
+          "Mystery": 0.10058479532163743,
+          "Romance": 0.04035087719298246,
+          "Sci-Fi": 0.0011695906432748538,
+          "Thriller": 0.32280701754385965,
+          "War": 0.10409356725146199,
+          "Western": 0.0
+        },
+        "male": {
+          "Action": 0.19907621247113164,
+          "Adventure": 0.0,
+          "Animation": 0.14503464203233257,
+          "Children's": 0.0,
+          "Comedy": 0.14503464203233257,
+          "Crime": 0.202540415704388,
+          "Documentary": 0.0,
+          "Drama": 0.3979214780600462,
+          "Fantasy": 0.0,
+          "Film-Noir": 0.14549653579676675,
+          "Horror": 0.0,
+          "Musical": 0.0,
+          "Mystery": 0.1420323325635104,
+          "Romance": 0.0,
+          "Sci-Fi": 0.014318706697459584,
+          "Thriller": 0.3551963048498845,
+          "War": 0.1353348729792148,
+          "Western": 0.0
+        }
+      },
+      "hitrate@10": 1.0,
+      "mae": 0.7886927127838135,
+      "metrics_by_gender": {
+        "female": {
+          "count": 23622,
+          "hitrate@10": 1.0,
+          "mae": 0.8374208211898804,
+          "ndcg@10": 0.8380147101230414,
+          "recall@10": 0.2194619003171808,
+          "rmse": 1.0552862882614136,
+          "users": 171
+        },
+        "male": {
+          "count": 77838,
+          "hitrate@10": 1.0,
+          "mae": 0.7739050388336182,
+          "ndcg@10": 0.8642128007479802,
+          "recall@10": 0.2039173645832708,
+          "rmse": 0.9678242802619934,
+          "users": 433
+        }
+      },
+      "ndcg@10": 0.8567957916472112,
+      "preference_probability": 0.7052016258239746,
+      "preference_probability_by_gender_item_group": {
+        "female|group_0": 0.7062110304832458,
+        "female|group_1": 0.7134959697723389,
+        "male|group_0": 0.7153193950653076,
+        "male|group_1": 0.6916452050209045
+      },
+      "recall@10": 0.20831821824303676,
+      "rmse": 0.9888783097267151
+    },
+    "10": {
+      "count": 96024,
+      "dee": 0.03514975309371948,
+      "dee_huber": 0.00018390733748674393,
+      "dee_ranking": 0.014259975287131965,
+      "genre_exposure_by_gender": {
+        "female": {
+          "Action": 0.1953216374269006,
+          "Adventure": 0.0,
+          "Animation": 0.20584795321637428,
+          "Children's": 0.0,
+          "Comedy": 0.18830409356725147,
+          "Crime": 0.19181286549707602,
+          "Documentary": 0.0,
+          "Drama": 0.38070175438596493,
+          "Fantasy": 0.0,
+          "Film-Noir": 0.10175438596491228,
+          "Horror": 0.0,
+          "Musical": 0.025146198830409357,
+          "Mystery": 0.0935672514619883,
+          "Romance": 0.025146198830409357,
+          "Sci-Fi": 0.0005847953216374269,
+          "Thriller": 0.3760233918128655,
+          "War": 0.0935672514619883,
+          "Western": 0.0
+        },
+        "male": {
+          "Action": 0.2002309468822171,
+          "Adventure": 0.0,
+          "Animation": 0.17528868360277136,
+          "Children's": 0.0,
+          "Comedy": 0.17505773672055427,
+          "Crime": 0.18822170900692842,
+          "Documentary": 0.0,
+          "Drama": 0.3861431870669746,
+          "Fantasy": 0.0,
+          "Film-Noir": 0.13279445727482678,
+          "Horror": 0.0,
+          "Musical": 0.0,
+          "Mystery": 0.13163972286374134,
+          "Romance": 0.0,
+          "Sci-Fi": 0.011547344110854504,
+          "Thriller": 0.37090069284064664,
+          "War": 0.11385681293302541,
+          "Western": 0.0
+        }
+      },
+      "hitrate@10": 1.0,
+      "mae": 0.7747169733047485,
+      "metrics_by_gender": {
+        "female": {
+          "count": 22083,
+          "hitrate@10": 1.0,
+          "mae": 0.8186891078948975,
+          "ndcg@10": 0.8400068031029803,
+          "recall@10": 0.2854814998201494,
+          "rmse": 1.0357568264007568,
+          "users": 171
+        },
+        "male": {
+          "count": 73941,
+          "hitrate@10": 1.0,
+          "mae": 0.7615845203399658,
+          "ndcg@10": 0.8612585731748116,
+          "recall@10": 0.26490012684743447,
+          "rmse": 0.9542434215545654,
+          "users": 433
+        }
+      },
+      "ndcg@10": 0.8552419296610978,
+      "preference_probability": 0.7212148308753967,
+      "preference_probability_by_gender_item_group": {
+        "female|group_0": 0.723588228225708,
+        "female|group_1": 0.7335351705551147,
+        "male|group_0": 0.7286351919174194,
+        "male|group_1": 0.7081791758537292
+      },
+      "recall@10": 0.2707269725069283,
+      "rmse": 0.9735937714576721
+    },
+    "3": {
+      "count": 100252,
+      "dee": 0.037153780460357666,
+      "dee_huber": 0.00019639507809188217,
+      "dee_ranking": 0.014499353739665821,
+      "genre_exposure_by_gender": {
+        "female": {
+          "Action": 0.19824561403508772,
+          "Adventure": 0.0,
+          "Animation": 0.195906432748538,
+          "Children's": 0.0,
+          "Comedy": 0.18187134502923977,
+          "Crime": 0.1976608187134503,
+          "Documentary": 0.0,
+          "Drama": 0.39473684210526316,
+          "Fantasy": 0.0,
+          "Film-Noir": 0.10409356725146199,
+          "Horror": 0.0,
+          "Musical": 0.018128654970760234,
+          "Mystery": 0.09239766081871345,
+          "Romance": 0.018128654970760234,
+          "Sci-Fi": 0.0,
+          "Thriller": 0.3695906432748538,
+          "War": 0.09707602339181287,
+          "Western": 0.0
+        },
+        "male": {
+          "Action": 0.20115473441108545,
+          "Adventure": 0.0,
+          "Animation": 0.17043879907621248,
+          "Children's": 0.0,
+          "Comedy": 0.17043879907621248,
+          "Crime": 0.1972286374133949,
+          "Documentary": 0.0,
+          "Drama": 0.39699769053117784,
+          "Fantasy": 0.0,
+          "Film-Noir": 0.12909930715935336,
+          "Horror": 0.0,
+          "Musical": 0.0,
+          "Mystery": 0.12863741339491916,
+          "Romance": 0.0,
+          "Sci-Fi": 0.004387990762124711,
+          "Thriller": 0.3702078521939954,
+          "War": 0.11293302540415705,
+          "Western": 0.0
+        }
+      },
+      "hitrate@10": 1.0,
+      "mae": 0.7798734903335571,
+      "metrics_by_gender": {
+        "female": {
+          "count": 23280,
+          "hitrate@10": 1.0,
+          "mae": 0.8209932446479797,
+          "ndcg@10": 0.8415085762677347,
+          "recall@10": 0.2300288548005183,
+          "rmse": 1.034993290901184,
+          "users": 171
+        },
+        "male": {
+          "count": 76972,
+          "hitrate@10": 1.0,
+          "mae": 0.7674369215965271,
+          "ndcg@10": 0.8651450022055289,
+          "recall@10": 0.21354335092230242,
+          "rmse": 0.9597433805465698,
+          "users": 433
+        }
+      },
+      "ndcg@10": 0.8584532326105573,
+      "preference_probability": 0.7094932794570923,
+      "preference_probability_by_gender_item_group": {
+        "female|group_0": 0.7125768661499023,
+        "female|group_1": 0.720829963684082,
+        "male|group_0": 0.7181229591369629,
+        "male|group_1": 0.695389449596405
+      },
+      "recall@10": 0.21821060450371785,
+      "rmse": 0.9777339100837708
+    },
+    "5": {
+      "count": 99044,
+      "dee": 0.036754608154296875,
+      "dee_huber": 0.0001941443479154259,
+      "dee_ranking": 0.014341420610435307,
+      "genre_exposure_by_gender": {
+        "female": {
+          "Action": 0.1976608187134503,
+          "Adventure": 0.0,
+          "Animation": 0.20116959064327486,
+          "Children's": 0.0,
+          "Comedy": 0.1865497076023392,
+          "Crime": 0.19649122807017544,
+          "Documentary": 0.0,
+          "Drama": 0.39239766081871347,
+          "Fantasy": 0.0,
+          "Film-Noir": 0.10116959064327485,
+          "Horror": 0.0,
+          "Musical": 0.01871345029239766,
+          "Mystery": 0.08830409356725147,
+          "Romance": 0.01871345029239766,
+          "Sci-Fi": 0.0,
+          "Thriller": 0.3736842105263158,
+          "War": 0.09649122807017543,
+          "Western": 0.0
+        },
+        "male": {
+          "Action": 0.20069284064665127,
+          "Adventure": 0.0,
+          "Animation": 0.17621247113163974,
+          "Children's": 0.0,
+          "Comedy": 0.17621247113163974,
+          "Crime": 0.19491916859122402,
+          "Documentary": 0.0,
+          "Drama": 0.3933025404157044,
+          "Fantasy": 0.0,
+          "Film-Noir": 0.12678983833718244,
+          "Horror": 0.0,
+          "Musical": 0.0,
+          "Mystery": 0.12655889145496535,
+          "Romance": 0.0,
+          "Sci-Fi": 0.004387990762124711,
+          "Thriller": 0.37551963048498843,
+          "War": 0.10762124711316397,
+          "Western": 0.0
+        }
+      },
+      "hitrate@10": 1.0,
+      "mae": 0.7784821391105652,
+      "metrics_by_gender": {
+        "female": {
+          "count": 22938,
+          "hitrate@10": 1.0,
+          "mae": 0.8259178996086121,
+          "ndcg@10": 0.8413843983804428,
+          "recall@10": 0.24261231729268126,
+          "rmse": 1.0436170101165771,
+          "users": 171
+        },
+        "male": {
+          "count": 76106,
+          "hitrate@10": 1.0,
+          "mae": 0.7641851902008057,
+          "ndcg@10": 0.8644466940080666,
+          "recall@10": 0.22344873104802962,
+          "rmse": 0.9560129046440125,
+          "users": 433
+        }
+      },
+      "ndcg@10": 0.8579174679280603,
+      "preference_probability": 0.7134734392166138,
+      "preference_probability_by_gender_item_group": {
+        "female|group_0": 0.7164083123207092,
+        "female|group_1": 0.7252968549728394,
+        "male|group_0": 0.7216622233390808,
+        "male|group_1": 0.699665904045105
+      },
+      "recall@10": 0.22887418344510815,
+      "rmse": 0.9770007133483887
+    }
+  }
+}

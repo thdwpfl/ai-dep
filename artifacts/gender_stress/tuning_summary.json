@@ -1,0 +1,390 @@
+{
+  "bounded_search": true,
+  "failed_trials": [],
+  "fair_met_constraints": true,
+  "mse_recovery_control": {
+    "config": {
+      "data": {
+        "processed_path": "data/processed/movielens_1m.npz"
+      },
+      "evaluation": {
+        "batch_size": 64,
+        "dee_bandwidth": 0.5,
+        "max_users": null,
+        "preference_threshold": 3.0,
+        "support_sizes": [
+          1,
+          3,
+          5,
+          10
+        ],
+        "top_k": 10
+      },
+      "model": {
+        "architecture": "explicit_gender_genre",
+        "context_dim": 96,
+        "dropout": 0.05,
+        "gender_dropout": 0.0,
+        "gender_embedding_dim": 8,
+        "gender_genre_scale": 1.0,
+        "hidden_dim": 128,
+        "item_embedding_dim": 64
+      },
+      "seed": 20261340,
+      "train": {
+        "batch_size": 64,
+        "dee_bandwidth": 0.25,
+        "dee_coefficient": 0.0,
+        "dee_huber_delta": 0.01,
+        "device": "cuda",
+        "epochs": 8,
+        "fairness_candidate_size": 96,
+        "grad_clip": 5.0,
+        "learning_rate": 0.001,
+        "max_train_users": null,
+        "max_val_users": null,
+        "num_workers": 0,
+        "preference_threshold": 3.0,
+        "query_size": 48,
+        "stress_coefficient": 0.0,
+        "stress_margin": 0.4,
+        "support_sizes": [
+          0,
+          1,
+          3,
+          5,
+          10
+        ],
+        "weight_decay": 1e-05
+      }
+    },
+    "name": "mse_recovery_control",
+    "status": "completed",
+    "summary": {
+      "best_checkpoint": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/gender_stress/mse_recovery_control/best.pt",
+      "best_epoch": 4,
+      "best_validation": {
+        "cf_group0_male_minus_female": 0.18701861798763275,
+        "cf_group1_female_minus_male": 0.2640099823474884,
+        "cf_interaction_gap": 0.45102860033512115,
+        "cf_stress_hinge": 0.3489713996648789,
+        "count": 24992,
+        "dee": 0.2153153419494629,
+        "dee_huber": 0.0019531534053385258,
+        "hitrate@10": 1.0,
+        "mae": 0.7752479910850525,
+        "ndcg@10": 0.8350814227355577,
+        "recall@10": 0.3526398688857466,
+        "rmse": 0.9761091470718384,
+        "users": 604
+      },
+      "best_validation_objective": 0.9761091470718384,
+      "cuda_device_name": "NVIDIA B200",
+      "dee_bandwidth": 0.25,
+      "dee_coefficient": 0.0,
+      "device": "cuda:0",
+      "elapsed_seconds": 23.515827014809474,
+      "epochs": 8,
+      "initialization": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/gender_stress/stress/margin_060_beta_100/best.pt",
+      "parameters": 362878,
+      "seed": 20261340,
+      "status": "completed",
+      "stress_coefficient": 0.0,
+      "stress_margin": 0.4,
+      "train_users": 4832,
+      "val_users": 604,
+      "validation_dee_bandwidth": 0.5,
+      "visible_gpu_count": 1
+    }
+  },
+  "natural": {
+    "config": {
+      "data": {
+        "processed_path": "data/processed/movielens_1m.npz"
+      },
+      "evaluation": {
+        "batch_size": 64,
+        "dee_bandwidth": 0.5,
+        "max_users": null,
+        "preference_threshold": 3.0,
+        "support_sizes": [
+          1,
+          3,
+          5,
+          10
+        ],
+        "top_k": 10
+      },
+      "model": {
+        "architecture": "explicit_gender_genre",
+        "context_dim": 96,
+        "dropout": 0.05,
+        "gender_dropout": 0.0,
+        "gender_embedding_dim": 8,
+        "gender_genre_scale": 1.0,
+        "hidden_dim": 128,
+        "item_embedding_dim": 64
+      },
+      "seed": 20260810,
+      "train": {
+        "batch_size": 64,
+        "dee_bandwidth": 0.5,
+        "dee_coefficient": 0.0,
+        "dee_huber_delta": 0.01,
+        "device": "cuda",
+        "epochs": 8,
+        "fairness_candidate_size": 96,
+        "grad_clip": 5.0,
+        "learning_rate": 0.001,
+        "max_train_users": null,
+        "max_val_users": null,
+        "num_workers": 0,
+        "preference_threshold": 3.0,
+        "query_size": 48,
+        "stress_coefficient": 0.0,
+        "stress_margin": 0.0,
+        "support_sizes": [
+          0,
+          1,
+          3,
+          5,
+          10
+        ],
+        "weight_decay": 1e-05
+      }
+    },
+    "name": "natural",
+    "status": "completed",
+    "summary": {
+      "best_checkpoint": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/gender_stress/natural/best.pt",
+      "best_epoch": 3,
+      "best_validation": {
+        "cf_group0_male_minus_female": 0.010519884526729584,
+        "cf_group1_female_minus_male": 0.057189032435417175,
+        "cf_interaction_gap": 0.06770891696214676,
+        "cf_stress_hinge": 0.0,
+        "count": 24992,
+        "dee": 0.050535738468170166,
+        "dee_huber": 0.0003136877785436809,
+        "hitrate@10": 1.0,
+        "mae": 0.7777938842773438,
+        "ndcg@10": 0.8329901860223315,
+        "recall@10": 0.3520199642485425,
+        "rmse": 0.9814555644989014,
+        "users": 604
+      },
+      "best_validation_objective": 0.9814555644989014,
+      "cuda_device_name": "NVIDIA B200",
+      "dee_bandwidth": 0.5,
+      "dee_coefficient": 0.0,
+      "device": "cuda:0",
+      "elapsed_seconds": 16.580365896923468,
+      "epochs": 8,
+      "initialization": "random",
+      "parameters": 362878,
+      "seed": 20260810,
+      "status": "completed",
+      "stress_coefficient": 0.0,
+      "stress_margin": 0.0,
+      "train_users": 4832,
+      "val_users": 604,
+      "validation_dee_bandwidth": 0.5,
+      "visible_gpu_count": 1
+    }
+  },
+  "scenario": "controlled gender-by-genre bias stress test",
+  "selected_fair": {
+    "config": {
+      "data": {
+        "processed_path": "data/processed/movielens_1m.npz"
+      },
+      "evaluation": {
+        "batch_size": 64,
+        "dee_bandwidth": 0.5,
+        "max_users": null,
+        "preference_threshold": 3.0,
+        "support_sizes": [
+          1,
+          3,
+          5,
+          10
+        ],
+        "top_k": 10
+      },
+      "model": {
+        "architecture": "explicit_gender_genre",
+        "context_dim": 96,
+        "dropout": 0.05,
+        "gender_dropout": 0.0,
+        "gender_embedding_dim": 8,
+        "gender_genre_scale": 1.0,
+        "hidden_dim": 128,
+        "item_embedding_dim": 64
+      },
+      "seed": 20260841,
+      "train": {
+        "batch_size": 64,
+        "dee_bandwidth": 0.5,
+        "dee_coefficient": 100.0,
+        "dee_huber_delta": 0.01,
+        "device": "cuda",
+        "epochs": 8,
+        "fairness_candidate_size": 96,
+        "grad_clip": 5.0,
+        "learning_rate": 0.001,
+        "max_train_users": null,
+        "max_val_users": null,
+        "num_workers": 0,
+        "preference_threshold": 3.0,
+        "query_size": 48,
+        "stress_coefficient": 0.0,
+        "stress_margin": 0.4,
+        "support_sizes": [
+          0,
+          1,
+          3,
+          5,
+          10
+        ],
+        "weight_decay": 1e-05
+      }
+    },
+    "name": "fair/dee_100_h050",
+    "status": "completed",
+    "summary": {
+      "best_checkpoint": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/gender_stress/fair/dee_100_h050/best.pt",
+      "best_epoch": 8,
+      "best_validation": {
+        "cf_group0_male_minus_female": 0.02849414199590683,
+        "cf_group1_female_minus_male": 0.059681762009859085,
+        "cf_interaction_gap": 0.08817590400576591,
+        "cf_stress_hinge": 0.7118240959942341,
+        "count": 24992,
+        "dee": 0.036560654640197754,
+        "dee_huber": 0.00019446882652118802,
+        "hitrate@10": 1.0,
+        "mae": 0.7924507856369019,
+        "ndcg@10": 0.8386291177975311,
+        "recall@10": 0.354495259780335,
+        "rmse": 0.9923200011253357,
+        "users": 604
+      },
+      "best_validation_objective": 1.0117668837774545,
+      "cuda_device_name": "NVIDIA B200",
+      "dee_bandwidth": 0.5,
+      "dee_coefficient": 100.0,
+      "device": "cuda:0",
+      "elapsed_seconds": 32.55971290380694,
+      "epochs": 8,
+      "initialization": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/gender_stress/stress/margin_060_beta_100/best.pt",
+      "parameters": 362878,
+      "seed": 20260841,
+      "status": "completed",
+      "stress_coefficient": 0.0,
+      "stress_margin": 0.4,
+      "train_users": 4832,
+      "val_users": 604,
+      "validation_dee_bandwidth": 0.5,
+      "visible_gpu_count": 1
+    }
+  },
+  "selected_stress": {
+    "config": {
+      "data": {
+        "processed_path": "data/processed/movielens_1m.npz"
+      },
+      "evaluation": {
+        "batch_size": 64,
+        "dee_bandwidth": 0.5,
+        "max_users": null,
+        "preference_threshold": 3.0,
+        "support_sizes": [
+          1,
+          3,
+          5,
+          10
+        ],
+        "top_k": 10
+      },
+      "model": {
+        "architecture": "explicit_gender_genre",
+        "context_dim": 96,
+        "dropout": 0.05,
+        "gender_dropout": 0.0,
+        "gender_embedding_dim": 8,
+        "gender_genre_scale": 1.0,
+        "hidden_dim": 128,
+        "item_embedding_dim": 64
+      },
+      "seed": 20260824,
+      "train": {
+        "batch_size": 64,
+        "dee_bandwidth": 0.5,
+        "dee_coefficient": 0.0,
+        "dee_huber_delta": 0.01,
+        "device": "cuda",
+        "epochs": 6,
+        "fairness_candidate_size": 96,
+        "grad_clip": 5.0,
+        "learning_rate": 0.001,
+        "max_train_users": null,
+        "max_val_users": null,
+        "num_workers": 0,
+        "preference_threshold": 3.0,
+        "query_size": 48,
+        "stress_coefficient": 1.0,
+        "stress_margin": 0.6,
+        "support_sizes": [
+          0,
+          1,
+          3,
+          5,
+          10
+        ],
+        "weight_decay": 1e-05
+      }
+    },
+    "name": "stress/margin_060_beta_100",
+    "status": "completed",
+    "summary": {
+      "best_checkpoint": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/gender_stress/stress/margin_060_beta_100/best.pt",
+      "best_epoch": 6,
+      "best_validation": {
+        "cf_group0_male_minus_female": 0.28517696261405945,
+        "cf_group1_female_minus_male": 0.39164242148399353,
+        "cf_interaction_gap": 0.676819384098053,
+        "cf_stress_hinge": 0.523180615901947,
+        "count": 24992,
+        "dee": 0.4107453227043152,
+        "dee_huber": 0.003907453268766403,
+        "hitrate@10": 1.0,
+        "mae": 0.7891210317611694,
+        "ndcg@10": 0.8254976093907544,
+        "recall@10": 0.35005855258704266,
+        "rmse": 0.9942384362220764,
+        "users": 604
+      },
+      "best_validation_objective": 1.5174190521240234,
+      "cuda_device_name": "NVIDIA B200",
+      "dee_bandwidth": 0.5,
+      "dee_coefficient": 0.0,
+      "device": "cuda:0",
+      "elapsed_seconds": 18.024353527929634,
+      "epochs": 6,
+      "initialization": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/gender_stress/natural/best.pt",
+      "parameters": 362878,
+      "seed": 20260824,
+      "status": "completed",
+      "stress_coefficient": 1.0,
+      "stress_margin": 0.6,
+      "train_users": 4832,
+      "val_users": 604,
+      "validation_dee_bandwidth": 0.5,
+      "visible_gpu_count": 1
+    }
+  },
+  "selection_split": "validation only",
+  "stress_met_constraints": true,
+  "timestamp": "2026-07-29T13:59:38.992184+00:00",
+  "trial_count": 11
+}

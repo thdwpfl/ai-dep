@@ -1,0 +1,112 @@
+[
+  {
+    "genres": [
+      "Drama"
+    ],
+    "item_index": 315,
+    "movie_id": 318,
+    "predicted_score": 4.5756,
+    "title": "Shawshank Redemption, The",
+    "year": 1994
+  },
+  {
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "item_index": 2836,
+    "movie_id": 2905,
+    "predicted_score": 4.5562,
+    "title": "Sanjuro",
+    "year": 1962
+  },
+  {
+    "genres": [
+      "Action",
+      "Drama"
+    ],
+    "item_index": 1950,
+    "movie_id": 2019,
+    "predicted_score": 4.5529,
+    "title": "Seven Samurai (The Magnificent Seven) (Shichinin no samurai)",
+    "year": 1954
+  },
+  {
+    "genres": [
+      "Drama",
+      "War"
+    ],
+    "item_index": 523,
+    "movie_id": 527,
+    "predicted_score": 4.5447,
+    "title": "Schindler's List",
+    "year": 1993
+  },
+  {
+    "genres": [
+      "Crime",
+      "Thriller"
+    ],
+    "item_index": 49,
+    "movie_id": 50,
+    "predicted_score": 4.5444,
+    "title": "Usual Suspects, The",
+    "year": 1995
+  },
+  {
+    "genres": [
+      "Mystery",
+      "Thriller"
+    ],
+    "item_index": 892,
+    "movie_id": 904,
+    "predicted_score": 4.5441,
+    "title": "Rear Window",
+    "year": 1954
+  },
+  {
+    "genres": [
+      "Animation",
+      "Comedy"
+    ],
+    "item_index": 1132,
+    "movie_id": 1148,
+    "predicted_score": 4.5367,
+    "title": "Wrong Trousers, The",
+    "year": 1993
+  },
+  {
+    "genres": [
+      "Film-Noir"
+    ],
+    "item_index": 910,
+    "movie_id": 922,
+    "predicted_score": 4.5343,
+    "title": "Sunset Blvd. (a.k.a. Sunset Boulevard)",
+    "year": 1950
+  },
+  {
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "item_index": 847,
+    "movie_id": 858,
+    "predicted_score": 4.517,
+    "title": "Godfather, The",
+    "year": 1972
+  },
+  {
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Thriller"
+    ],
+    "item_index": 735,
+    "movie_id": 745,
+    "predicted_score": 4.5143,
+    "title": "Close Shave, A",
+    "year": 1995
+  }
+]

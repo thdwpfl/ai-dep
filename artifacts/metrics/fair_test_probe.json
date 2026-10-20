@@ -1,0 +1,97 @@
+{
+  "checkpoint": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/checkpoints/fair_best.pt",
+  "checkpoint_epoch": 8,
+  "num_users": 604,
+  "protocol": {
+    "positive_rating_threshold": 4.0,
+    "query": "all later rated movies",
+    "ranking_candidates": "the held-out rated query set",
+    "recommendation_candidates": "full catalog excluding support movies",
+    "split": "test",
+    "support": "earliest timestamp-ordered ratings",
+    "top_k": 10,
+    "user_disjoint": true
+  },
+  "support_sizes": {
+    "5": {
+      "count": 99044,
+      "dee": 0.0064258575439453125,
+      "dee_huber": 8.216268724936526e-06,
+      "dee_ranking": 0.017168816179037094,
+      "genre_exposure_by_gender": {
+        "female": {
+          "Action": 0.30409356725146197,
+          "Adventure": 0.10935672514619883,
+          "Animation": 0.20058479532163742,
+          "Children's": 0.0,
+          "Comedy": 0.19941520467836257,
+          "Crime": 0.1953216374269006,
+          "Documentary": 0.0,
+          "Drama": 0.39649122807017545,
+          "Fantasy": 0.0,
+          "Film-Noir": 0.09415204678362574,
+          "Horror": 0.0,
+          "Musical": 0.0,
+          "Mystery": 0.09824561403508772,
+          "Romance": 0.0,
+          "Sci-Fi": 0.0,
+          "Thriller": 0.2994152046783626,
+          "War": 0.10175438596491228,
+          "Western": 0.0
+        },
+        "male": {
+          "Action": 0.3020785219399538,
+          "Adventure": 0.10969976905311778,
+          "Animation": 0.20115473441108545,
+          "Children's": 0.0,
+          "Comedy": 0.2,
+          "Crime": 0.19353348729792147,
+          "Documentary": 0.0,
+          "Drama": 0.3951501154734411,
+          "Fantasy": 0.0,
+          "Film-Noir": 0.09422632794457275,
+          "Horror": 0.0,
+          "Musical": 0.0,
+          "Mystery": 0.09722863741339492,
+          "Romance": 0.0,
+          "Sci-Fi": 0.0,
+          "Thriller": 0.2995381062355658,
+          "War": 0.1023094688221709,
+          "Western": 0.0
+        }
+      },
+      "hitrate@10": 1.0,
+      "mae": 0.8021681308746338,
+      "metrics_by_gender": {
+        "female": {
+          "count": 22938,
+          "hitrate@10": 1.0,
+          "mae": 0.847823977470398,
+          "ndcg@10": 0.8426105461245912,
+          "recall@10": 0.24122322013172923,
+          "rmse": 1.0539131164550781,
+          "users": 171
+        },
+        "male": {
+          "count": 76106,
+          "hitrate@10": 1.0,
+          "mae": 0.7884076237678528,
+          "ndcg@10": 0.8631415324023135,
+          "recall@10": 0.22252653617141174,
+          "rmse": 0.9773285984992981,
+          "users": 433
+        }
+      },
+      "ndcg@10": 0.8573289518501768,
+      "preference_probability": 0.8132122755050659,
+      "preference_probability_by_gender_item_group": {
+        "female|group_0": 0.8128060698509216,
+        "female|group_1": 0.8097954392433167,
+        "male|group_0": 0.8152900338172913,
+        "male|group_1": 0.8126872181892395
+      },
+      "recall@10": 0.22781980265686586,
+      "rmse": 0.9955894351005554
+    }
+  }
+}

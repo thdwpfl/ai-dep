@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.streamlit/
+*.py[cod]
+data/raw/
+data/processed/*.tmp
+artifacts/tuning/*/checkpoints/
+

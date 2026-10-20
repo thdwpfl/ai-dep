@@ -1,0 +1,108 @@
+[
+  {
+    "genres": [
+      "Animation",
+      "Comedy"
+    ],
+    "item_index": 1132,
+    "movie_id": 1148,
+    "predicted_score": 4.6416,
+    "title": "Wrong Trousers, The",
+    "year": 1993
+  },
+  {
+    "genres": [
+      "Drama"
+    ],
+    "item_index": 315,
+    "movie_id": 318,
+    "predicted_score": 4.6178,
+    "title": "Shawshank Redemption, The",
+    "year": 1994
+  },
+  {
+    "genres": [
+      "Animation"
+    ],
+    "item_index": 711,
+    "movie_id": 720,
+    "predicted_score": 4.5899,
+    "title": "Wallace & Gromit: The Best of Aardman Animation",
+    "year": 1996
+  },
+  {
+    "genres": [
+      "Animation",
+      "Comedy"
+    ],
+    "item_index": 1205,
+    "movie_id": 1223,
+    "predicted_score": 4.5854,
+    "title": "Grand Day Out, A",
+    "year": 1992
+  },
+  {
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Thriller"
+    ],
+    "item_index": 735,
+    "movie_id": 745,
+    "predicted_score": 4.5596,
+    "title": "Close Shave, A",
+    "year": 1995
+  },
+  {
+    "genres": [
+      "Comedy"
+    ],
+    "item_index": 1120,
+    "movie_id": 1136,
+    "predicted_score": 4.5473,
+    "title": "Monty Python and the Holy Grail",
+    "year": 1974
+  },
+  {
+    "genres": [
+      "Comedy"
+    ],
+    "item_index": 594,
+    "movie_id": 598,
+    "predicted_score": 4.5229,
+    "title": "Window to Paris",
+    "year": 1994
+  },
+  {
+    "genres": [
+      "Drama"
+    ],
+    "item_index": 1176,
+    "movie_id": 1193,
+    "predicted_score": 4.5203,
+    "title": "One Flew Over the Cuckoo's Nest",
+    "year": 1975
+  },
+  {
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "item_index": 2255,
+    "movie_id": 2324,
+    "predicted_score": 4.5136,
+    "title": "Life Is Beautiful (La Vita \u00e8 bella)",
+    "year": 1997
+  },
+  {
+    "genres": [
+      "Animation",
+      "Comedy"
+    ],
+    "item_index": 3360,
+    "movie_id": 3429,
+    "predicted_score": 4.5084,
+    "title": "Creature Comforts",
+    "year": 1990
+  }
+]

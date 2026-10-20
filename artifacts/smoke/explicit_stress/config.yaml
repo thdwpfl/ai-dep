@@ -1,0 +1,47 @@
+seed: 20260811
+data:
+  processed_path: data/processed/movielens_1m.npz
+model:
+  item_embedding_dim: 24
+  hidden_dim: 48
+  context_dim: 32
+  gender_embedding_dim: 4
+  dropout: 0.0
+  gender_dropout: 0.0
+  architecture: explicit_gender_genre
+  gender_genre_scale: 1.0
+train:
+  device: cuda
+  epochs: 1
+  max_train_users: 128
+  max_val_users: 48
+  batch_size: 16
+  query_size: 12
+  support_sizes:
+  - 0
+  - 1
+  - 3
+  - 5
+  - 10
+  learning_rate: 0.002
+  weight_decay: 1.0e-05
+  grad_clip: 5.0
+  dee_coefficient: 0.0
+  dee_bandwidth: 0.5
+  dee_huber_delta: 0.01
+  fairness_candidate_size: 32
+  preference_threshold: 3.0
+  stress_coefficient: 1.0
+  stress_margin: 0.4
+  num_workers: 0
+evaluation:
+  support_sizes:
+  - 1
+  - 3
+  - 5
+  - 10
+  top_k: 10
+  batch_size: 32
+  max_users: 48
+  preference_threshold: 3.0
+  dee_bandwidth: 0.5

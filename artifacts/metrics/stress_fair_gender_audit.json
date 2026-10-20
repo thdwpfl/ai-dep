@@ -1,0 +1,1086 @@
+{
+  "audit": "same-support gender counterfactual full-catalog audit",
+  "checkpoint": {
+    "dataset_fingerprint": "51ef38f20b07e20b64058dffc96e3d31fbf54f72ace189a38117190cb791a759",
+    "dee_coefficient": 100.0,
+    "epoch": 8,
+    "format_version": 1,
+    "model_class": "ColdStartSetEncoder",
+    "model_config": {
+      "architecture": "explicit_gender_genre",
+      "context_dim": 96,
+      "dropout": 0.05,
+      "gender_dropout": 0.0,
+      "gender_embedding_dim": 8,
+      "gender_genre_scale": 1.0,
+      "hidden_dim": 128,
+      "item_embedding_dim": 64
+    },
+    "path": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/artifacts/checkpoints/stress_fair_best.pt",
+    "sha256": "b6f7d93fac3f1894e9d15b0324aeab9234d6f933037732afa9f4a08294f4fa08"
+  },
+  "created_at": "2026-07-29T14:11:59.342997+00:00",
+  "data": {
+    "actual_gender_user_counts": {
+      "female": 171,
+      "male": 433
+    },
+    "catalog_movies": 3883,
+    "dataset": "MovieLens 1M",
+    "dataset_fingerprint": "51ef38f20b07e20b64058dffc96e3d31fbf54f72ace189a38117190cb791a759",
+    "path": "/NHNHOME/WORKSPACE/26msit001_A/optiml/aidep/data/processed",
+    "selected_users": 604,
+    "split": "test"
+  },
+  "parameters": {
+    "bandwidth": 0.5,
+    "batch_size": 64,
+    "max_users": null,
+    "seed": 20260729,
+    "support_sizes": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "thresholds": [
+      3.0,
+      3.5,
+      4.0
+    ],
+    "top_k": 10
+  },
+  "protocol": {
+    "counterfactual": "identical support movie indices, ratings, and timestamps; only the M/F gender input changes",
+    "dee_candidates": "unambiguous paper group-0/group-1 movies excluding rated support",
+    "genre_exposure": "multi-label genre memberships per top-k position; rates need not sum to one",
+    "paper_group_0": "male-preferred genres",
+    "paper_group_1": "female-preferred genres",
+    "score_candidates": "full catalog excluding rated support movies",
+    "support": "earliest timestamp-ordered ratings",
+    "top_k_candidates": "full catalog excluding rated support movies",
+    "users": "user-disjoint test split"
+  },
+  "runtime": {
+    "cuda_device_name": "NVIDIA B200",
+    "device": "cuda:0",
+    "elapsed_seconds": 5.821400216082111,
+    "requested_device": "cuda",
+    "visible_gpu_count": 1
+  },
+  "schema_version": 1,
+  "support_sizes": {
+    "1": {
+      "actual_gender_dee_by_threshold": {
+        "3.0": {
+          "bandwidth": 0.5,
+          "cell_counts": {
+            "female|group_0": 119319,
+            "female|group_1": 122060,
+            "male|group_0": 302124,
+            "male|group_1": 309087
+          },
+          "cell_probabilities": {
+            "female|group_0": 0.8463740348815918,
+            "female|group_1": 0.8567301630973816,
+            "male|group_0": 0.8572623133659363,
+            "male|group_1": 0.836854100227356
+          },
+          "global_probability": 0.8482638001441956,
+          "raw_dee": 0.030764341354370117,
+          "score_by_actual_gender": {
+            "female": {
+              "count": 241379,
+              "mean": 3.6178755373617935,
+              "std": 0.3509216936511214
+            },
+            "male": {
+              "count": 611211,
+              "mean": 3.60581463699378,
+              "std": 0.3511774827764958
+            }
+          },
+          "score_count": 852590,
+          "score_mean": 3.60922923025658,
+          "score_std": 0.35114712589154784,
+          "threshold": 3.0
+        },
+        "3.5": {
+          "bandwidth": 0.5,
+          "cell_counts": {
+            "female|group_0": 119319,
+            "female|group_1": 122060,
+            "male|group_0": 302124,
+            "male|group_1": 309087
+          },
+          "cell_probabilities": {
+            "female|group_0": 0.5782737731933594,
+            "female|group_1": 0.5952079892158508,
+            "male|group_0": 0.5986048579216003,
+            "male|group_1": 0.5572357773780823
+          },
+          "global_probability": 0.58027583360672,
+          "raw_dee": 0.05830329656600952,
+          "score_by_actual_gender": {
+            "female": {
+              "count": 241379,
+              "mean": 3.6178755373617935,
+              "std": 0.3509216936511214
+            },
+            "male": {
+              "count": 611211,
+              "mean": 3.60581463699378,
+              "std": 0.3511774827764958
+            }
+          },
+          "score_count": 852590,
+          "score_mean": 3.60922923025658,
+          "score_std": 0.35114712589154784,
+          "threshold": 3.5
+        },
+        "4.0": {
+          "bandwidth": 0.5,
+          "cell_counts": {
+            "female|group_0": 119319,
+            "female|group_1": 122060,
+            "male|group_0": 302124,
+            "male|group_1": 309087
+          },
+          "cell_probabilities": {
+            "female|group_0": 0.2618950605392456,
+            "female|group_1": 0.2666952908039093,
+            "male|group_0": 0.28086376190185547,
+            "male|group_1": 0.23419514298439026
+          },
+          "global_probability": 0.2592620551586151,
+          "raw_dee": 0.05673485994338989,
+          "score_by_actual_gender": {
+            "female": {
+              "count": 241379,
+              "mean": 3.6178755373617935,
+              "std": 0.3509216936511214
+            },
+            "male": {
+              "count": 611211,
+              "mean": 3.60581463699378,
+              "std": 0.3511774827764958
+            }
+          },
+          "score_count": 852590,
+          "score_mean": 3.60922923025658,
+          "score_std": 0.35114712589154784,
+          "threshold": 4.0
+        }
+      },
+      "actual_support_count": {
+        "max": 1,
+        "mean": 1.0,
+        "min": 1
+      },
+      "counterfactual_top_k": {
+        "effective_k_max": 10,
+        "effective_k_min": 10,
+        "exact_order": {
+          "count": 0,
+          "fraction": 0.0
+        },
+        "exact_set": {
+          "count": 0,
+          "fraction": 0.0
+        },
+        "jaccard": {
+          "count": 604,
+          "max": 0.8181818181818182,
+          "mean": 0.6650246368789414,
+          "median": 0.6666666666666666,
+          "p95": 0.6666666666666666,
+          "p99": 0.8181818181818182
+        },
+        "overlap_fraction": {
+          "count": 604,
+          "max": 0.9,
+          "mean": 0.7975165562913908,
+          "median": 0.8,
+          "p95": 0.8,
+          "p99": 0.9
+        },
+        "requested_k": 10,
+        "top_1_same": {
+          "count": 588,
+          "fraction": 0.9735099337748344
+        }
+      },
+      "counterfactual_top_k_genre_exposure": {
+        "absolute_gap": {
+          "Action": 0.003973509933774849,
+          "Adventure": 0.07996688741721855,
+          "Animation": 0.014238410596026485,
+          "Children's": 0.0,
+          "Comedy": 0.013079470198675502,
+          "Crime": 0.005463576158940414,
+          "Documentary": 0.0013245033112582781,
+          "Drama": 0.17897350993377487,
+          "Fantasy": 0.0,
+          "Film-Noir": 0.10612582781456954,
+          "Horror": 0.0,
+          "Musical": 0.0,
+          "Mystery": 0.00728476821192052,
+          "Romance": 0.001986754966887417,
+          "Sci-Fi": 0.08460264900662251,
+          "Thriller": 0.0034768211920530034,
+          "War": 0.08526490066225166,
+          "Western": 0.0
+        },
+        "absolute_gap_summary": {
+          "l1_sum": 0.5857615894039736,
+          "max": 0.17897350993377487,
+          "mean": 0.032542310522442976
+        },
+        "female": {
+          "Action": 0.20811258278145695,
+          "Adventure": 0.0935430463576159,
+          "Animation": 0.2185430463576159,
+          "Children's": 0.0,
+          "Comedy": 0.2077814569536424,
+          "Crime": 0.1945364238410596,
+          "Documentary": 0.0,
+          "Drama": 0.5769867549668874,
+          "Fantasy": 0.0,
+          "Film-Noir": 0.0,
+          "Horror": 0.0,
+          "Musical": 0.0,
+          "Mystery": 0.08990066225165563,
+          "Romance": 0.001986754966887417,
+          "Sci-Fi": 0.0,
+          "Thriller": 0.2890728476821192,
+          "War": 0.09884105960264901,
+          "Western": 0.0
+        },
+        "male": {
+          "Action": 0.2120860927152318,
+          "Adventure": 0.013576158940397352,
+          "Animation": 0.20430463576158941,
+          "Children's": 0.0,
+          "Comedy": 0.1947019867549669,
+          "Crime": 0.2,
+          "Documentary": 0.0013245033112582781,
+          "Drama": 0.3980132450331126,
+          "Fantasy": 0.0,
+          "Film-Noir": 0.10612582781456954,
+          "Horror": 0.0,
+          "Musical": 0.0,
+          "Mystery": 0.09718543046357615,
+          "Romance": 0.0,
+          "Sci-Fi": 0.08460264900662251,
+          "Thriller": 0.2855960264900662,
+          "War": 0.18410596026490067,
+          "Western": 0.0
+        }
+      },
+      "paper_group_counterfactual": {
+        "formula": "(male-female on group_0) - (male-female on group_1)",
+        "group_0": {
+          "male_minus_female": {
+            "count": 421443,
+            "max": 0.16515350341796875,
+            "mean": 0.028476377314801057,
+            "median": 0.022783994674682617,
+            "p95": 0.08789887428283688,
+            "p99": 0.12827208518982017
+          },
+          "name": "male-preferred genres"
+        },
+        "group_1": {
+          "female_minus_male": {
+            "count": 431147,
+            "max": 0.16306304931640625,
+            "mean": 0.05963967658178728,
+            "median": 0.05879783630371094,
+            "p95": 0.10255417823791502,
+            "p99": 0.14619874954223633
+          },
+          "name": "female-preferred genres"
+        },
+        "interaction_difference_in_differences": 0.08811605389658833
+      },
+      "score_difference_male_minus_female": {
+        "absolute": {
+          "count": 2344728,
+          "max": 0.16515350341796875,
+          "mean": 0.03349334047618712,
+          "median": 0.03170061111450195,
+          "p95": 0.07415691614150999,
+          "p99": 0.10520103216171262
+        },
+        "signed": {
+          "count": 2344728,
+          "max": 0.16515350341796875,
+          "mean": -0.010686523572038179,
+          "median": -0.013424396514892578,
+          "p95": 0.051714420318603516,
+          "p99": 0.0870039081573486
+        }
+      },
+      "users": 604
+    },
+    "10": {
+      "actual_gender_dee_by_threshold": {
+        "3.0": {
+          "bandwidth": 0.5,
+          "cell_counts": {
+            "female|group_0": 118998,
+            "female|group_1": 121748,
+            "male|group_0": 300969,
+            "male|group_1": 308556
+          },
+          "cell_probabilities": {
+            "female|group_0": 0.8493200540542603,
+            "female|group_1": 0.859528124332428,
+            "male|group_0": 0.8619114756584167,
+            "male|group_1": 0.8419389724731445
+          },
+          "global_probability": 0.8525601625442505,
+          "raw_dee": 0.03018057346343994,
+          "score_by_actual_gender": {
+            "female": {
+              "count": 240746,
+              "mean": 3.6246312583783133,
+              "std": 0.3457539032362229
+            },
+            "male": {
+              "count": 609525,
+              "mean": 3.618083346008467,
+              "std": 0.3466213408312776
+            }
+          },
+          "score_count": 850271,
+          "score_mean": 3.619937323988889,
+          "score_std": 0.3463885166573835,
+          "threshold": 3.0
+        },
+        "3.5": {
+          "bandwidth": 0.5,
+          "cell_counts": {
+            "female|group_0": 118998,
+            "female|group_1": 121748,
+            "male|group_0": 300969,
+            "male|group_1": 308556
+          },
+          "cell_probabilities": {
+            "female|group_0": 0.5823873281478882,
+            "female|group_1": 0.5992358326911926,
+            "male|group_0": 0.6056080460548401,
+            "male|group_1": 0.5648225545883179
+          },
+          "global_probability": 0.5866451263427734,
+          "raw_dee": 0.05763399600982666,
+          "score_by_actual_gender": {
+            "female": {
+              "count": 240746,
+              "mean": 3.6246312583783133,
+              "std": 0.3457539032362229
+            },
+            "male": {
+              "count": 609525,
+              "mean": 3.618083346008467,
+              "std": 0.3466213408312776
+            }
+          },
+          "score_count": 850271,
+          "score_mean": 3.619937323988889,
+          "score_std": 0.3463885166573835,
+          "threshold": 3.5
+        },
+        "4.0": {
+          "bandwidth": 0.5,
+          "cell_counts": {
+            "female|group_0": 118998,
+            "female|group_1": 121748,
+            "male|group_0": 300969,
+            "male|group_1": 308556
+          },
+          "cell_probabilities": {
+            "female|group_0": 0.2648419439792633,
+            "female|group_1": 0.2696852385997772,
+            "male|group_0": 0.28681257367134094,
+            "male|group_1": 0.24008871614933014
+          },
+          "global_probability": 0.26432961225509644,
+          "raw_dee": 0.05259181559085846,
+          "score_by_actual_gender": {
+            "female": {
+              "count": 240746,
+              "mean": 3.6246312583783133,
+              "std": 0.3457539032362229
+            },
+            "male": {
+              "count": 609525,
+              "mean": 3.618083346008467,
+              "std": 0.3466213408312776
+            }
+          },
+          "score_count": 850271,
+          "score_mean": 3.619937323988889,
+          "score_std": 0.3463885166573835,
+          "threshold": 4.0
+        }
+      },
+      "actual_support_count": {
+        "max": 10,
+        "mean": 10.0,
+        "min": 10
+      },
+      "counterfactual_top_k": {
+        "effective_k_max": 10,
+        "effective_k_min": 10,
+        "exact_order": {
+          "count": 0,
+          "fraction": 0.0
+        },
+        "exact_set": {
+          "count": 0,
+          "fraction": 0.0
+        },
+        "jaccard": {
+          "count": 604,
+          "max": 0.8181818181818182,
+          "mean": 0.6432629180973551,
+          "median": 0.6666666666666666,
+          "p95": 0.6666666666666666,
+          "p99": 0.8181818181818182
+        },
+        "overlap_fraction": {
+          "count": 604,
+          "max": 0.9,
+          "mean": 0.7814569536423842,
+          "median": 0.8,
+          "p95": 0.8,
+          "p99": 0.9
+        },
+        "requested_k": 10,
+        "top_1_same": {
+          "count": 579,
+          "fraction": 0.9586092715231788
+        }
+      },
+      "counterfactual_top_k_genre_exposure": {
+        "absolute_gap": {
+          "Action": 0.0009933774834437192,
+          "Adventure": 0.0892384105960265,
+          "Animation": 0.010596026490066218,
+          "Children's": 0.0,
+          "Comedy": 0.00894039735099339,
+          "Crime": 0.002317880794701993,
+          "Documentary": 0.010264900662251655,
+          "Drama": 0.19834437086092715,
+          "Fantasy": 0.0,
+          "Film-Noir": 0.11109271523178808,
+          "Horror": 0.0,
+          "Musical": 0.0,
+          "Mystery": 0.011920529801324506,
+          "Romance": 0.0013245033112582781,
+          "Sci-Fi": 0.08791390728476821,
+          "Thriller": 0.00016556291390729116,
+          "War": 0.09188741721854306,
+          "Western": 0.0
+        },
+        "absolute_gap_summary": {
+          "l1_sum": 0.6250000000000001,
+          "max": 0.19834437086092715,
+          "mean": 0.03472222222222223
+        },
+        "female": {
+          "Action": 0.19039735099337748,
+          "Adventure": 0.09552980132450331,
+          "Animation": 0.2099337748344371,
+          "Children's": 0.0,
+          "Comedy": 0.2056291390728477,
+          "Crime": 0.18675496688741722,
+          "Documentary": 0.0,
+          "Drama": 0.5912251655629139,
+          "Fantasy": 0.0,
+          "Film-Noir": 0.0,
+          "Horror": 0.0,
+          "Musical": 0.0,
+          "Mystery": 0.09718543046357615,
+          "Romance": 0.0013245033112582781,
+          "Sci-Fi": 0.00016556291390728477,
+          "Thriller": 0.2948675496688742,
+          "War": 0.09884105960264901,
+          "Western": 0.0
+        },
+        "male": {
+          "Action": 0.1913907284768212,
+          "Adventure": 0.006291390728476821,
+          "Animation": 0.19933774834437087,
+          "Children's": 0.0,
+          "Comedy": 0.1966887417218543,
+          "Crime": 0.1890728476821192,
+          "Documentary": 0.010264900662251655,
+          "Drama": 0.3928807947019868,
+          "Fantasy": 0.0,
+          "Film-Noir": 0.11109271523178808,
+          "Horror": 0.0,
+          "Musical": 0.0,
+          "Mystery": 0.10910596026490066,
+          "Romance": 0.0,
+          "Sci-Fi": 0.0880794701986755,
+          "Thriller": 0.2950331125827815,
+          "War": 0.19072847682119207,
+          "Western": 0.0
+        }
+      },
+      "paper_group_counterfactual": {
+        "formula": "(male-female on group_0) - (male-female on group_1)",
+        "group_0": {
+          "male_minus_female": {
+            "count": 419967,
+            "max": 0.16287946701049805,
+            "mean": 0.02837608650229828,
+            "median": 0.022661924362182617,
+            "p95": 0.08765881061553954,
+            "p99": 0.1277759075164791
+          },
+          "name": "male-preferred genres"
+        },
+        "group_1": {
+          "female_minus_male": {
+            "count": 430304,
+            "max": 0.16370725631713867,
+            "mean": 0.05948308410653928,
+            "median": 0.05840957164764404,
+            "p95": 0.10222712755203242,
+            "p99": 0.14615699052810666
+          },
+          "name": "female-preferred genres"
+        },
+        "interaction_difference_in_differences": 0.08785917060883756
+      },
+      "score_difference_male_minus_female": {
+        "absolute": {
+          "count": 2339292,
+          "max": 0.16370725631713867,
+          "mean": 0.0334330579077819,
+          "median": 0.03165316581726074,
+          "p95": 0.07395993471145623,
+          "p99": 0.10500634670257547
+        },
+        "signed": {
+          "count": 2339292,
+          "max": 0.16287946701049805,
+          "mean": -0.010658906409445222,
+          "median": -0.013437986373901367,
+          "p95": 0.051595902442931996,
+          "p99": 0.08665299415588379
+        }
+      },
+      "users": 604
+    },
+    "3": {
+      "actual_gender_dee_by_threshold": {
+        "3.0": {
+          "bandwidth": 0.5,
+          "cell_counts": {
+            "female|group_0": 119235,
+            "female|group_1": 121982,
+            "male|group_0": 301892,
+            "male|group_1": 308937
+          },
+          "cell_probabilities": {
+            "female|group_0": 0.846544623374939,
+            "female|group_1": 0.8569445013999939,
+            "male|group_0": 0.8583326935768127,
+            "male|group_1": 0.8380094170570374
+          },
+          "global_probability": 0.8491153717041016,
+          "raw_dee": 0.030723154544830322,
+          "score_by_actual_gender": {
+            "female": {
+              "count": 241217,
+              "mean": 3.6183653682759553,
+              "std": 0.34996736556476443
+            },
+            "male": {
+              "count": 610829,
+              "mean": 3.6085446153621863,
+              "std": 0.3495985817553005
+            }
+          },
+          "score_count": 852046,
+          "score_mean": 3.6113249025246175,
+          "score_std": 0.3497310113416817,
+          "threshold": 3.0
+        },
+        "3.5": {
+          "bandwidth": 0.5,
+          "cell_counts": {
+            "female|group_0": 119235,
+            "female|group_1": 121982,
+            "male|group_0": 301892,
+            "male|group_1": 308937
+          },
+          "cell_probabilities": {
+            "female|group_0": 0.5786818265914917,
+            "female|group_1": 0.5955316424369812,
+            "male|group_0": 0.6003172397613525,
+            "male|group_1": 0.5589333176612854
+          },
+          "global_probability": 0.5815993547439575,
+          "raw_dee": 0.05823373794555664,
+          "score_by_actual_gender": {
+            "female": {
+              "count": 241217,
+              "mean": 3.6183653682759553,
+              "std": 0.34996736556476443
+            },
+            "male": {
+              "count": 610829,
+              "mean": 3.6085446153621863,
+              "std": 0.3495985817553005
+            }
+          },
+          "score_count": 852046,
+          "score_mean": 3.6113249025246175,
+          "score_std": 0.3497310113416817,
+          "threshold": 3.5
+        },
+        "4.0": {
+          "bandwidth": 0.5,
+          "cell_counts": {
+            "female|group_0": 119235,
+            "female|group_1": 121982,
+            "male|group_0": 301892,
+            "male|group_1": 308937
+          },
+          "cell_probabilities": {
+            "female|group_0": 0.2619918882846832,
+            "female|group_1": 0.2669057846069336,
+            "male|group_0": 0.2821013629436493,
+            "male|group_1": 0.23541922867298126
+          },
+          "global_probability": 0.2601856589317322,
+          "raw_dee": 0.055208489298820496,
+          "score_by_actual_gender": {
+            "female": {
+              "count": 241217,
+              "mean": 3.6183653682759553,
+              "std": 0.34996736556476443
+            },
+            "male": {
+              "count": 610829,
+              "mean": 3.6085446153621863,
+              "std": 0.3495985817553005
+            }
+          },
+          "score_count": 852046,
+          "score_mean": 3.6113249025246175,
+          "score_std": 0.3497310113416817,
+          "threshold": 4.0
+        }
+      },
+      "actual_support_count": {
+        "max": 3,
+        "mean": 3.0,
+        "min": 3
+      },
+      "counterfactual_top_k": {
+        "effective_k_max": 10,
+        "effective_k_min": 10,
+        "exact_order": {
+          "count": 0,
+          "fraction": 0.0
+        },
+        "exact_set": {
+          "count": 0,
+          "fraction": 0.0
+        },
+        "jaccard": {
+          "count": 604,
+          "max": 0.8181818181818182,
+          "mean": 0.6586504003722545,
+          "median": 0.6666666666666666,
+          "p95": 0.6666666666666666,
+          "p99": 0.8181818181818182
+        },
+        "overlap_fraction": {
+          "count": 604,
+          "max": 0.9,
+          "mean": 0.7932119205298014,
+          "median": 0.8,
+          "p95": 0.8,
+          "p99": 0.9
+        },
+        "requested_k": 10,
+        "top_1_same": {
+          "count": 600,
+          "fraction": 0.9933774834437086
+        }
+      },
+      "counterfactual_top_k_genre_exposure": {
+        "absolute_gap": {
+          "Action": 0.0019867549668874107,
+          "Adventure": 0.08658940397350993,
+          "Animation": 0.009602649006622527,
+          "Children's": 0.0,
+          "Comedy": 0.008278145695364225,
+          "Crime": 0.0038079470198675303,
+          "Documentary": 0.013245033112582781,
+          "Drama": 0.18973509933774835,
+          "Fantasy": 0.0,
+          "Film-Noir": 0.10430463576158941,
+          "Horror": 0.0,
+          "Musical": 0.0,
+          "Mystery": 0.005794701986754969,
+          "Romance": 0.00016556291390728477,
+          "Sci-Fi": 0.0814569536423841,
+          "Thriller": 0.0013245033112583293,
+          "War": 0.08211920529801323,
+          "Western": 0.0
+        },
+        "absolute_gap_summary": {
+          "l1_sum": 0.58841059602649,
+          "max": 0.18973509933774835,
+          "mean": 0.032689477557027224
+        },
+        "female": {
+          "Action": 0.19768211920529802,
+          "Adventure": 0.09254966887417218,
+          "Animation": 0.2144039735099338,
+          "Children's": 0.0,
+          "Comedy": 0.2076158940397351,
+          "Crime": 0.1913907284768212,
+          "Documentary": 0.0,
+          "Drama": 0.5837748344370861,
+          "Fantasy": 0.0,
+          "Film-Noir": 0.0,
+          "Horror": 0.0,
+          "Musical": 0.0,
+          "Mystery": 0.09552980132450331,
+          "Romance": 0.00016556291390728477,
+          "Sci-Fi": 0.0,
+          "Thriller": 0.295364238410596,
+          "War": 0.0978476821192053,
+          "Western": 0.0
+        },
+        "male": {
+          "Action": 0.19966887417218543,
+          "Adventure": 0.005960264900662252,
+          "Animation": 0.20480132450331126,
+          "Children's": 0.0,
+          "Comedy": 0.19933774834437087,
+          "Crime": 0.19519867549668873,
+          "Documentary": 0.013245033112582781,
+          "Drama": 0.39403973509933776,
+          "Fantasy": 0.0,
+          "Film-Noir": 0.10430463576158941,
+          "Horror": 0.0,
+          "Musical": 0.0,
+          "Mystery": 0.10132450331125828,
+          "Romance": 0.0,
+          "Sci-Fi": 0.0814569536423841,
+          "Thriller": 0.29668874172185433,
+          "War": 0.17996688741721853,
+          "Western": 0.0
+        }
+      },
+      "paper_group_counterfactual": {
+        "formula": "(male-female on group_0) - (male-female on group_1)",
+        "group_0": {
+          "male_minus_female": {
+            "count": 421127,
+            "max": 0.16825103759765625,
+            "mean": 0.028478374946050794,
+            "median": 0.02273273468017578,
+            "p95": 0.0879488945007324,
+            "p99": 0.1286140060424803
+          },
+          "name": "male-preferred genres"
+        },
+        "group_1": {
+          "female_minus_male": {
+            "count": 430919,
+            "max": 0.1653594970703125,
+            "mean": 0.059628254096357684,
+            "median": 0.05856204032897949,
+            "p95": 0.10236001014709473,
+            "p99": 0.1469895696640015
+          },
+          "name": "female-preferred genres"
+        },
+        "interaction_difference_in_differences": 0.08810662904240849
+      },
+      "score_difference_male_minus_female": {
+        "absolute": {
+          "count": 2343520,
+          "max": 0.16825103759765625,
+          "mean": 0.033496977866963575,
+          "median": 0.031728506088256836,
+          "p95": 0.07415654659271231,
+          "p99": 0.10523424863815312
+        },
+        "signed": {
+          "count": 2343520,
+          "max": 0.16825103759765625,
+          "mean": -0.010677486128615236,
+          "median": -0.013417482376098633,
+          "p95": 0.051732540130615234,
+          "p99": 0.08697166919708255
+        }
+      },
+      "users": 604
+    },
+    "5": {
+      "actual_gender_dee_by_threshold": {
+        "3.0": {
+          "bandwidth": 0.5,
+          "cell_counts": {
+            "female|group_0": 119158,
+            "female|group_1": 121894,
+            "male|group_0": 301636,
+            "male|group_1": 308811
+          },
+          "cell_probabilities": {
+            "female|group_0": 0.8441352844238281,
+            "female|group_1": 0.8546624779701233,
+            "male|group_0": 0.859211802482605,
+            "male|group_1": 0.8388592600822449
+          },
+          "global_probability": 0.8490695357322693,
+          "raw_dee": 0.030879735946655273,
+          "score_by_actual_gender": {
+            "female": {
+              "count": 241052,
+              "mean": 3.6127420622485324,
+              "std": 0.35054132515023967
+            },
+            "male": {
+              "count": 610447,
+              "mean": 3.6102649154422997,
+              "std": 0.3471343126226367
+            }
+          },
+          "score_count": 851499,
+          "score_mean": 3.610966174271654,
+          "score_std": 0.3481039809578402,
+          "threshold": 3.0
+        },
+        "3.5": {
+          "bandwidth": 0.5,
+          "cell_counts": {
+            "female|group_0": 119158,
+            "female|group_1": 121894,
+            "male|group_0": 301636,
+            "male|group_1": 308811
+          },
+          "cell_probabilities": {
+            "female|group_0": 0.5750395655632019,
+            "female|group_1": 0.5918582081794739,
+            "male|group_0": 0.6010151505470276,
+            "male|group_1": 0.5596927404403687
+          },
+          "global_probability": 0.5810830593109131,
+          "raw_dee": 0.05814105272293091,
+          "score_by_actual_gender": {
+            "female": {
+              "count": 241052,
+              "mean": 3.6127420622485324,
+              "std": 0.35054132515023967
+            },
+            "male": {
+              "count": 610447,
+              "mean": 3.6102649154422997,
+              "std": 0.3471343126226367
+            }
+          },
+          "score_count": 851499,
+          "score_mean": 3.610966174271654,
+          "score_std": 0.3481039809578402,
+          "threshold": 3.5
+        },
+        "4.0": {
+          "bandwidth": 0.5,
+          "cell_counts": {
+            "female|group_0": 119158,
+            "female|group_1": 121894,
+            "male|group_0": 301636,
+            "male|group_1": 308811
+          },
+          "cell_probabilities": {
+            "female|group_0": 0.2592560946941376,
+            "female|group_1": 0.26389753818511963,
+            "male|group_0": 0.28254544734954834,
+            "male|group_1": 0.23587937653064728
+          },
+          "global_probability": 0.25969260931015015,
+          "raw_dee": 0.05130751430988312,
+          "score_by_actual_gender": {
+            "female": {
+              "count": 241052,
+              "mean": 3.6127420622485324,
+              "std": 0.35054132515023967
+            },
+            "male": {
+              "count": 610447,
+              "mean": 3.6102649154422997,
+              "std": 0.3471343126226367
+            }
+          },
+          "score_count": 851499,
+          "score_mean": 3.610966174271654,
+          "score_std": 0.3481039809578402,
+          "threshold": 4.0
+        }
+      },
+      "actual_support_count": {
+        "max": 5,
+        "mean": 5.0,
+        "min": 5
+      },
+      "counterfactual_top_k": {
+        "effective_k_max": 10,
+        "effective_k_min": 10,
+        "exact_order": {
+          "count": 0,
+          "fraction": 0.0
+        },
+        "exact_set": {
+          "count": 0,
+          "fraction": 0.0
+        },
+        "jaccard": {
+          "count": 604,
+          "max": 0.8181818181818182,
+          "mean": 0.6540385662902218,
+          "median": 0.6666666666666666,
+          "p95": 0.6666666666666666,
+          "p99": 0.8181818181818182
+        },
+        "overlap_fraction": {
+          "count": 604,
+          "max": 0.9,
+          "mean": 0.7897350993377485,
+          "median": 0.8,
+          "p95": 0.8,
+          "p99": 0.9
+        },
+        "requested_k": 10,
+        "top_1_same": {
+          "count": 599,
+          "fraction": 0.9917218543046358
+        }
+      },
+      "counterfactual_top_k_genre_exposure": {
+        "absolute_gap": {
+          "Action": 0.003807947019867558,
+          "Adventure": 0.08791390728476821,
+          "Animation": 0.010596026490066246,
+          "Children's": 0.0,
+          "Comedy": 0.008443708609271516,
+          "Crime": 0.003973509933774849,
+          "Documentary": 0.011754966887417218,
+          "Drama": 0.19354304635761588,
+          "Fantasy": 0.0,
+          "Film-Noir": 0.10579470198675496,
+          "Horror": 0.0,
+          "Musical": 0.0,
+          "Mystery": 0.007284768211920534,
+          "Romance": 0.0,
+          "Sci-Fi": 0.08526490066225166,
+          "Thriller": 0.0006622516556291091,
+          "War": 0.08559602649006623,
+          "Western": 0.0
+        },
+        "absolute_gap_summary": {
+          "l1_sum": 0.604635761589404,
+          "max": 0.19354304635761588,
+          "mean": 0.03359087564385578
+        },
+        "female": {
+          "Action": 0.19370860927152317,
+          "Adventure": 0.09403973509933775,
+          "Animation": 0.2144039735099338,
+          "Children's": 0.0,
+          "Comedy": 0.20728476821192052,
+          "Crime": 0.1902317880794702,
+          "Documentary": 0.0,
+          "Drama": 0.5865894039735099,
+          "Fantasy": 0.0,
+          "Film-Noir": 0.0,
+          "Horror": 0.0,
+          "Musical": 0.0,
+          "Mystery": 0.09552980132450331,
+          "Romance": 0.0,
+          "Sci-Fi": 0.0,
+          "Thriller": 0.29519867549668877,
+          "War": 0.09685430463576158,
+          "Western": 0.0
+        },
+        "male": {
+          "Action": 0.19751655629139073,
+          "Adventure": 0.006125827814569536,
+          "Animation": 0.20380794701986754,
+          "Children's": 0.0,
+          "Comedy": 0.198841059602649,
+          "Crime": 0.19420529801324504,
+          "Documentary": 0.011754966887417218,
+          "Drama": 0.393046357615894,
+          "Fantasy": 0.0,
+          "Film-Noir": 0.10579470198675496,
+          "Horror": 0.0,
+          "Musical": 0.0,
+          "Mystery": 0.10281456953642384,
+          "Romance": 0.0,
+          "Sci-Fi": 0.08526490066225166,
+          "Thriller": 0.2958609271523179,
+          "War": 0.1824503311258278,
+          "Western": 0.0
+        }
+      },
+      "paper_group_counterfactual": {
+        "formula": "(male-female on group_0) - (male-female on group_1)",
+        "group_0": {
+          "male_minus_female": {
+            "count": 420794,
+            "max": 0.16673874855041504,
+            "mean": 0.02848143048112313,
+            "median": 0.0227433443069458,
+            "p95": 0.08790644407272338,
+            "p99": 0.12871496200561527
+          },
+          "name": "male-preferred genres"
+        },
+        "group_1": {
+          "female_minus_male": {
+            "count": 430705,
+            "max": 0.1644601821899414,
+            "mean": 0.05965295134435311,
+            "median": 0.05859971046447754,
+            "p95": 0.10236825942993164,
+            "p99": 0.14688490867614745
+          },
+          "name": "female-preferred genres"
+        },
+        "interaction_difference_in_differences": 0.08813438182547624
+      },
+      "score_difference_male_minus_female": {
+        "absolute": {
+          "count": 2342312,
+          "max": 0.16673874855041504,
+          "mean": 0.0335165806528517,
+          "median": 0.03174448013305664,
+          "p95": 0.07416129112243652,
+          "p99": 0.10527104854583746
+        },
+        "signed": {
+          "count": 2342312,
+          "max": 0.16673874855041504,
+          "mean": -0.01068582650668224,
+          "median": -0.013431549072265625,
+          "p95": 0.05177164077758789,
+          "p99": 0.08694675445556665
+        }
+      },
+      "users": 604
+    }
+  }
+}
