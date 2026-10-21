@@ -1,6 +1,8 @@
-# Cold-start MovieLens recommendations with DEE
+# DEE-ColdRec
 
-This project recommends warm-catalog MovieLens 1M movies to a completely
+**Equal-Experience Regularization for Cold-Start Recommendation**
+
+DEE-ColdRec recommends warm-catalog MovieLens 1M movies to a completely
 unseen user from gender and zero or more 1–5 ratings. There is no learned
 user-ID embedding. The repository contains two deliberately separated studies:
 
@@ -79,10 +81,11 @@ than attributed wholly to DEE.
 
 ## Reproduce
 
-Run every command from this directory:
+Clone the repository and run the commands from its root directory:
 
 ```bash
-cd /NHNHOME/WORKSPACE/26msit001_A/optiml/aidep
+git clone https://github.com/thdwpfl/dee-coldrec.git
+cd dee-coldrec
 python3 -m venv --system-site-packages .venv
 .venv/bin/python -m pip install -r requirements.txt
 ```
